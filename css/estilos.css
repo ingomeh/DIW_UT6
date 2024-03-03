@@ -1,0 +1,228 @@
+/*REGLAS GENERALES*/
+/*definimos las variables de los colores*/
+
+:root {
+  --dark-text-color: #002438;
+  --light-text-color: #F5F5F5;
+  --main-color: #002438;
+  --secondary-color: #61A7AF;
+  --background-color: #F5F5F5;
+  --highlight-color: #f2b077;
+}
+
+/* Resetear valores*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ESTILOS GENERALES DEL PROYECTO*/
+/* Estilos genericos del cuerpo */
+body {
+  margin: 0;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--dark-text-color);
+  background-color: var(--background-color);
+}
+
+
+/* Estilos de enlaces */
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/* Estilos de párrafos */
+p {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+/* Estilos de encabezados */
+h1,
+h2 {
+  line-height: normal;
+  text-align: center;
+}
+
+/* Estilos solo para encabezados h1*/
+h1 {
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* Estilos solo para encabezados h2*/
+h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color:var(--secondary-color)
+}
+
+/* Estilos de sección */
+section{
+  margin-bottom:15px;
+}
+
+video{
+  margin: 35px auto;
+  display: block;
+  width: 100%;
+}
+
+/* REGLAS PARA DISEÑO RESPONSIVE*/
+/* La clase .container es un contenedor que ocupa el 100% de la pantalla manteniendo un padding a ambos lados*/
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Para pantallas con un ancho mínimo de 990px */
+@media (min-width: 990px) {
+	/* Ajustar el ancho máximo del contenedor a 960px.
+	Si la pantalla es mayor de 990 el ancho máximo será de 960 y se verán margenes a ambos lados si sigue creciendo*/
+  .container {
+    max-width: 960px;
+  }
+}
+/* Para pantallas con un ancho mínimo de 1200px */
+@media (min-width: 1200px) {
+	/* Ajustar el ancho máximo del contenedor a 1140px.
+	Si la pantalla es mayor de 1200, el ancho máximo será de 1140 y se verán margenes a ambos lados si sigue creciendo*/
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Para pantallas con un ancho mínimo de 1400px */
+@media (min-width: 1400px) {
+	/* Ajustar el ancho máximo del contenedor a 1300px.
+	Si la pantalla es mayor de 1400, el ancho máximo será de 1300 y se verán margenes a ambos lados si sigue creciendo*/
+  .container {
+    max-width: 1300px;
+  }
+}
+
+/* REGLAS PARA BLOQUES PRINCIPALES*/
+/* Header*/
+body > header {
+  min-height: 120px;
+  background-color: var(--main-color);
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 70px;
+}
+
+body .container{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body header .container{
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+/* Estilos del enlace del logo*/
+body .header__link-logo {
+  display: inline-block;
+}
+
+/* Estilos del logo*/
+body .header__logo {
+  height: 80px;
+  width: auto;
+}
+
+/* Estilos del logo*/
+body .header__link-logo h1 {
+  font-family: Nico Moji;
+  color: var(--light-text-color);
+  margin-bottom: 0;
+}
+
+/* Estilos de los enlaces del menú */
+body .header__menu-links {
+  margin-bottom: 0;
+  padding-left: 0;
+  display: flex;
+  column-gap: 50px;
+  margin-top: 25px;
+}
+
+/* Estilos de los elementos de la lista del menú*/
+body .header__menu-item {
+  text-transform: uppercase;
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+/* Estilos de los enlaces del menú*/
+body .header__menu-item a {
+  color: var(--light-text-color);
+  font-size: 1rem;
+}
+
+/* Estilos de los enlaces del menú al pasar el ratón*/
+body .header__menu-item a:hover {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Estilos del enlace activo en el menú del encabezado */
+body .header__menu-item--active {
+  font-weight: 600;
+  border-bottom: solid var(--highlight-color);
+}
+
+/* Estilos de navegación */
+nav {
+  text-align: center;
+}
+
+/* Estilos del bloque main */
+main {
+  padding-top: 50px 100px 50px 100px;
+}
+
+/* Estilos del pie de página */
+body > footer {
+  background-color: var(--main-color);
+  padding-top: 35px;
+  padding-bottom: 35px;
+  color: var(--light-text-color);
+  text-align: center;
+  margin-top: 30px;
+}
+
+/*ESTILOS ESPECIFICOS DE CADA PÁGINA*/
+/*ESTILOS PÁGINA INDEX.HTML*/
+
+.page-home .flex-container {
+  display: flex;
+  column-gap: 50px;
+}
+
+/* Para pantallas hasta un maximo de 990px */
+@media (max-width: 990px) {
+  .page-home .flex-container {
+    flex-wrap: wrap;
+  }
+}
+
+/*ESTILOS PÁGINA TUTORIAL.HTML*/
+
+/* Estilos de párrafos */
+.page-tutorial p {
+  font-size: 1.2rem;
+}
